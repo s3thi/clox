@@ -1,2 +1,9 @@
 project('clox', 'c')
-executable('clox', 'src/main.c')
+
+clox_sources = [
+    'src/main.c',
+    'src/chunk.c',
+    'src/memory.c'
+]
+
+executable('clox', clox_sources)
