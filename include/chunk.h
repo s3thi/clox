@@ -1,5 +1,5 @@
-#ifndef clox_chunk_h
-#define clox_chunk_h
+#ifndef CLOX_CHUNK_H
+#define CLOX_CHUNK_H
 
 #include "common.h"
 #include "value.h"
@@ -30,4 +30,4 @@ void writeChunk(Chunk *chunk, uint8_t byte, int line);
 
 int addConstant(Chunk *chunk, Value value);
 
-#endif
+#endif // CLOX_CHUNK_H
