@@ -1,8 +1,8 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-#include "common.h"
 #include "chunk.h"
+#include "common.h"
 #include "debug.h"
 #include "vm.h"
 
@@ -31,7 +31,7 @@ static char *readFile(const char *path) {
     size_t fileSize = ftell(file);
     rewind(file);
 
-    char *buffer = (char *) malloc(sizeof(char) * (fileSize + 1));
+    char *buffer = (char *)malloc(sizeof(char) * (fileSize + 1));
     if (buffer == NULL) {
         fprintf(stderr, "Not enough memory to read \"%s\"", path);
         exit(74);
@@ -54,8 +54,10 @@ static void runFile(const char *path) {
     InterpretResult result = interpret(source);
     free(source);
 
-    if (result == INTERPRET_COMPILE_ERROR) exit(65);
-    if (result == INTERPRET_RUNTIME_ERROR) exit(70);
+    if (result == INTERPRET_COMPILE_ERROR)
+        exit(65);
+    if (result == INTERPRET_RUNTIME_ERROR)
+        exit(70);
 }
 
 int main(int argc, char **argv) {
