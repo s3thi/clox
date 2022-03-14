@@ -51,7 +51,7 @@ static Token makeToken(TokenType type) {
   Token token;
   token.type = type;
   token.start = scanner.start;
-  token.length = (int)(scanner.current - scanner.start);
+  token.length = (int) (scanner.current - scanner.start);
   token.line = scanner.line;
   return token;
 }
@@ -60,7 +60,7 @@ static Token errorToken(const char *message) {
   Token token;
   token.type = TOKEN_ERROR;
   token.start = message;
-  token.length = (int)strlen(message);
+  token.length = (int) strlen(message);
   token.line = scanner.line;
   return token;
 }

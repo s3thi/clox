@@ -169,7 +169,7 @@ static uint8_t makeConstant(Value value) {
     return 0;
   }
 
-  return (uint8_t)constant;
+  return (uint8_t) constant;
 }
 
 static void emitConstant(Value value) {
@@ -208,7 +208,7 @@ static ParseRule *getRule(TokenType type) { return &rules[type]; }
 static void binary() {
   TokenType operatorType = parser.previous.type;
   ParseRule *rule = getRule(operatorType);
-  parsePrecedence((Precedence)(rule->precedence + 1));
+  parsePrecedence((Precedence) (rule->precedence + 1));
 
   switch (operatorType) {
   case TOKEN_PLUS:
