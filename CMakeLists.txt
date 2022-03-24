@@ -13,4 +13,5 @@ add_executable(
         src/compiler.c
         src/scanner.c
         src/object.c
+        src/table.c
 )
